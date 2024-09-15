@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(97, 97, 97);
+}
+
+li {
+  list-style: none;
+}
+
+.btns {
+  padding: 10px 20px;
+  margin-right: 6px;
+  background: transparent;
+  border: none;
+  border: 0.6px solid #ccc;
+  border-radius: 5px;
+  color: #323232;
+  cursor: pointer;
+}
+/* App.css */
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh; /* Optional: Ensures the container takes full height */
+}
+
+.content-container {
+  flex: 1;
+  padding: 20px;
+  margin-right: 250px; /* Space to account for the sidebar's width */
+}
+
+.sidebar-container {
+  width: 250px; /* Fixed width for the sidebar */
+  padding: 20px;
+  background-color: #f4f4f4;
+  position: absolute; /* Position sidebar on the right */
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100vh; /* Ensure sidebar takes full height */
+}
+
+@media (max-width: 768px) {
+  /* Styles for screens less than 768px wide */
+  .content-container {
+    flex-direction: column; /* Stack elements vertically on small screens */
+    margin-right: 0px;
+  }
+
+  .sidebar-container {
+    position: static; /* Remove absolute positioning for smaller screens */
+    width: 100%; /* Take the full width on smaller screens */
+  }
+}
